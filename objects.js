@@ -5,7 +5,7 @@
 // name: Isaac - name is considered a key property of the object, whereas "Isaac" is considered a value of the key withing the object
 
 //================================================================================
-{
+
     const me = { // 1. Create an empty object called me.
         firstName: "Isaac",
         lastName: "Asher", // 2. Assign it properties for firstName, lastName, age, and email with corresponding values.
@@ -21,4 +21,19 @@
     console.log(newMe.age); // 5. Using dot notation, verify that age has been updated.
     console.log(newMe["place of residence"]); // Access the value of "place of residence"
     console.log(me) // returns => {firstName: "Isaac", lastName: "Asher",  age: 26, email: "isaac.asher97@gmail.com"}
-}
+//================================================================================
+
+// Write a function called fancyGreeting that accepts your me object as an argument. The function should console.log a greeting using the firstName and lastName values from the me
+
+    function fancyGreeting() {
+        console.log(`Greetings, ${me.firstName} ${me.lastName}. Nice to meet you`);
+        }
+    fancyGreeting(me); // returns "Greetings, Isaac Asher, Nice to meet you"function fancyGreeting() console.log(`Greetings, ${firstName} ${lastName}. Nice to meet you`)
+
+//================================================================================
+
+
+
+
+
+   
