@@ -32,6 +32,22 @@
 
 //================================================================================
 
+{
+     //  Given the slimer object:
+    const monster = {
+        name: "Slimer",
+        color: "greenish",
+        type: "plasm or ghost or something"
+     }
+   
+     console.log(monster.name);//  What would you write to access the name and console.log it?
+    let newMonster = {
+        ...monster,
+        type: "Creature",
+        age: 6, //  What would you write to add a key to the object called age, and set the age to 6?
+    }
+    console.log(newMonster); //  console.log the object to make sure type is creature, and age is 6     
+}
 
 
 
