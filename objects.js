@@ -162,4 +162,10 @@ const cat1 = {
   // Log the cat1 and cat2 objects
   console.log(cat1); // Output: { name: 'Fluffy', breed: 'Persian', age: 4 }
   console.log(cat2); // Output: { name: 'Simba', breed: 'Siamese', age: 2 }
+ 
+  // Write a console.log that is three levels deep of combineCats. combineCats should have two arguments, each which are combineCats, each which have two arguments, each which are combineCats.
   
+  console.log(combineCats(combineCats(cat1, combineCats(cat2, cat1)), combineCats(combineCats(cat2, cat1), combineCats(cat1, cat2))));
+
+//========================================================================
+
