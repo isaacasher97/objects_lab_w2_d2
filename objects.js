@@ -64,61 +64,102 @@
 // Bonus: Try to accept user input for the game by running it in the Chrome console and using alerts and prompts
 
 // Model the adventurer
-const adventurerName = prompt("What is your adventurer's name?");
-const adventurerHitpoints = prompt("How many hitpoints does your adventurer have?");
-const adventurer = {
-  name: adventurerName,
-  hitpoints: adventurerHitpoints,
-  attack: 10,
-  defense: 5
-};
+// const adventurerName = prompt("What is your adventurer's name?");
+// const adventurerHitpoints = prompt("How many hitpoints does your adventurer have?");
+// const adventurer = {
+//   name: adventurerName,
+//   hitpoints: adventurerHitpoints,
+//   attack: 10,
+//   defense: 5
+// };
 
-// Model the ogre
-const ogre = {
-  name: "Ogre",
-  hitpoints: 50,
-  attack: 15,
-  defense: 2
-};
+// // Model the ogre
+// const ogre = {
+//   name: "Ogre",
+//   hitpoints: 50,
+//   attack: 15,
+//   defense: 2
+// };
 
-// Simulate the battle
-function battle(adventurer, ogre) {
-  let attacker, defender;
+// // Simulate the battle
+// function battle(adventurer, ogre) {
+//   let attacker, defender;
   
-  // Randomly select who attacks first
-  if (Math.random() < 0.5) {
-    attacker = adventurer;
-    defender = ogre;
-    console.log("You go first!");
-  } else {
-    attacker = ogre;
-    defender = adventurer;
-    console.log("The ogre goes first!");
-  }
+//   // Randomly select who attacks first
+//   if (Math.random() < 0.5) {
+//     attacker = adventurer;
+//     defender = ogre;
+//     console.log("You go first!");
+//   } else {
+//     attacker = ogre;
+//     defender = adventurer;
+//     console.log("The ogre goes first!");
+//   }
   
-  // Battle loop
-  while (adventurer.hitpoints > 0 && ogre.hitpoints > 0) {
-    let damage = attacker.attack - defender.defense;
-    damage = damage < 0 ? 0 : damage;
-    console.log(`${attacker.name} attacks ${defender.name} for ${damage} damage!`);
-    defender.hitpoints -= damage;
-    console.log(`${defender.name} has ${defender.hitpoints} hitpoints left.`);
+//   // Battle loop
+//   while (adventurer.hitpoints > 0 && ogre.hitpoints > 0) {
+//     let damage = attacker.attack - defender.defense;
+//     damage = damage < 0 ? 0 : damage;
+//     console.log(`${attacker.name} attacks ${defender.name} for ${damage} damage!`);
+//     defender.hitpoints -= damage;
+//     console.log(`${defender.name} has ${defender.hitpoints} hitpoints left.`);
     
-    // Swap attacker and defender
-    [attacker, defender] = [defender, attacker];
+//     // Swap attacker and defender
+//     [attacker, defender] = [defender, attacker];
+//   }
+  
+//   // Determine the winner
+//   if (adventurer.hitpoints <= 0) {
+//     alert("You died! Game over.");
+//   } else {
+//     alert("You won! Congratulations!");
+//   }
+// }
+
+// battle(adventurer, ogre);
+
+//========================================================================
+
+const cat1 = {
+    name: "Fluffy",
+    breed: "Persian",
+    age: 4
+  };
+  
+  // console.log the cat's age
+  console.log(cat1.age); // Output: 4
+  
+  // console.log the cat's breed
+  console.log(cat1.breed); // Output: Persian
+  
+  // Define an object called cat2 that also contains the properties:
+  // name, breed, age (a number)
+  const cat2 = {
+    name: "Simba",
+    breed: "Siamese",
+    age: 2
+  };
+  
+  // Write a function combineCats that has two parameters mama, and papa.
+  function combineCats(mama, papa) {
+    // Create a new cat object with the combined properties
+    const kitten = {
+      name: mama.name + "-" + papa.name,
+      breed: mama.breed + "-" + papa.breed,
+      age: 1
+    };
+    
+    // Return the new cat object
+    return kitten;
   }
   
-  // Determine the winner
-  if (adventurer.hitpoints <= 0) {
-    alert("You died! Game over.");
-  } else {
-    alert("You won! Congratulations!");
-  }
-}
-
-battle(adventurer, ogre);
-
-
-
-
-   
+  // Call the combineCats function and pass cat1 and cat2 as arguments
+  const kitten = combineCats(cat1, cat2);
+  
+  // Log the new kitten object
+  console.log(kitten); // Output: { name: 'Fluffy-Simba', breed: 'Persian-Siamese', age: 1 }
+  
+  // Log the cat1 and cat2 objects
+  console.log(cat1); // Output: { name: 'Fluffy', breed: 'Persian', age: 4 }
+  console.log(cat2); // Output: { name: 'Simba', breed: 'Siamese', age: 2 }
+  
